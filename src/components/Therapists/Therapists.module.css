@@ -1,0 +1,40 @@
+.therapists{ background:var(--ivory-50); }
+
+.headerRow{ display:flex; gap:80px; align-items:flex-end; flex-wrap:wrap; margin-bottom:48px; }
+
+.carouselArrows{ display:flex; gap:12px; flex-shrink:0; }
+.circleBtn{ width:56px; height:56px; border-radius:50%; display:flex; align-items:center; justify-content:center; }
+.circleBtnOutline{ border:1.5px solid var(--gold-700); color:var(--gold-700); }
+.circleBtnDark{ background:var(--emerald-800); color:var(--text-light); border:none; }
+.rotate180{ transform:rotate(180deg); }
+
+.carouselViewport{ overflow:hidden; width:100%; touch-action:pan-y; }
+.therapistTrack{ display:flex; gap:24px; width:max-content; transition:transform .4s ease; cursor:grab; }
+.therapistTrack:active{ cursor:grabbing; }
+
+.therapist{ display:flex; flex-direction:column; gap:14px; width:264px; }
+.portraitArch{
+  position:relative; width:264px; height:360px; border-radius:132px 132px 24px 24px;
+  overflow:hidden; display:flex; align-items:flex-end; padding:16px;
+}
+.portraitArch img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.tag{ position:relative; z-index:1; background:var(--ivory-50); border-radius:999px; padding:6px 12px; font-size:14px; color:var(--text-dark); }
+.therapistName{ font-family:var(--serif); font-weight:600; font-size:28px; margin:0; color:var(--text-dark); }
+
+@media (max-width: 900px){
+  .headerRow{ flex-direction:column; align-items:flex-start; gap:16px; margin-bottom:24px; }
+  .headerRow > div{ flex:none; width:100%; }
+
+  .headerDesc{ display:none; }
+  .carouselArrows{ display:none; }
+
+  .carouselViewport{
+    overflow-x:auto; overflow-y:hidden; touch-action:pan-x;
+    -webkit-overflow-scrolling:touch; scroll-snap-type:x proximity;
+    margin:0 -24px; padding:0 24px;
+  }
+  .carouselViewport::-webkit-scrollbar{ display:none; }
+
+  .therapistTrack{ transform:none !important; transition:none; cursor:auto; }
+  .therapist{ scroll-snap-align:start; }
+}

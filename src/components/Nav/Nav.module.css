@@ -1,0 +1,33 @@
+.navPill{
+  position:absolute; top:24px; left:50%; transform:translateX(-50%);
+  width:min(1200px,90%); height:68px;
+  background:rgba(10,52,39,.92); backdrop-filter:blur(8px);
+  border-radius:34px; display:flex; align-items:center; justify-content:space-between;
+  padding:0 10px 0 20px; box-shadow:0 12px 32px rgba(5,36,26,.18); z-index:40;
+  transition:height .25s, box-shadow .25s, background .25s;
+}
+.navPill.scrolled{ height:60px; box-shadow:0 16px 36px rgba(5,36,26,.3); }
+
+.navLogo{ display:flex; align-items:center; gap:10px; }
+.navLogoMark{ width:42px; height:42px; }
+.navWordmark{ display:flex; flex-direction:column; align-items:center; line-height:1; gap:2px; }
+.navWordmark strong{
+  font-family:var(--serif); font-weight:600; font-size:21px; letter-spacing:3px;
+  background:linear-gradient(180deg,var(--gold-200),var(--gold-500) 55%, var(--gold-600));
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.navWordmark small{ font-size:7px; color:var(--gold-500); letter-spacing:4.3px; font-weight:500; }
+
+.navLinks{ display:flex; gap:32px; font-size:15px; font-weight:500; color:var(--text-light); }
+.navLinks a:hover{ color:var(--gold-300); }
+
+.navBurger{ display:none; flex-direction:column; gap:5px; padding:8px; }
+.navBurger span{ width:22px; height:2px; background:var(--text-light); border-radius:2px; }
+
+@media (max-width: 1100px){
+  .navLinks{ display:none; }
+}
+
+@media (max-width: 900px){
+  .navPill{ position:relative; top:0; left:0; transform:none; width:100%; margin:16px auto; height:60px; }
+}

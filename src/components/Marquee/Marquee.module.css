@@ -1,0 +1,22 @@
+.marqueeBand{
+  background:var(--emerald-800); height:96px; display:flex; align-items:center;
+  overflow:hidden; position:relative;
+}
+.marqueeTrack{ display:flex; width:max-content; animation:marquee 28s linear infinite; }
+.marqueeGroup{ display:flex; align-items:center; gap:0; padding-right:18px; }
+.marqueeGroup span{
+  font-family:var(--serif); font-style:italic; font-size:36px; color:var(--gold-500); white-space:nowrap;
+  margin-right:18px;
+}
+.marqueeGroup :global(.icon){ color:var(--sakura-400); margin-right:18px; }
+
+@keyframes marquee{ from{ transform:translateX(0);} to{ transform:translateX(-50%);} }
+
+@media (prefers-reduced-motion:reduce){
+  .marqueeTrack{ animation:none; }
+}
+
+@media (max-width: 520px){
+  .marqueeGroup span{ font-size:24px; }
+  .marqueeBand{ height:72px; }
+}

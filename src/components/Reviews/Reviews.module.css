@@ -1,0 +1,22 @@
+.reviewSpotlight{ background:var(--emerald-900); display:flex; gap:96px; align-items:center; flex-wrap:wrap; color:var(--text-light); }
+
+.ratingBlock{ display:flex; flex-direction:column; gap:16px; flex-shrink:0; }
+.ratingNum{ font-family:var(--serif); font-weight:600; font-size:clamp(80px,12vw,160px); line-height:.9; margin:0; }
+.ratingStars{ display:flex; gap:6px; color:var(--gold-500); }
+.ratingSub{ font-size:16px; margin:0; }
+
+.quoteBlock{ flex:1 1 400px; display:flex; flex-direction:column; gap:28px; min-width:0; }
+.quoteMark{ font-family:var(--serif); font-weight:600; font-size:140px; line-height:.6; color:var(--sakura-400); margin:0; }
+.quoteBig{ font-family:var(--serif); font-style:italic; font-size:clamp(26px,3.5vw,40px); line-height:1.25; margin:0; max-width:760px; }
+.quotePerson{ display:flex; gap:14px; align-items:center; }
+.avatar{ width:52px; height:52px; border-radius:50%; background:linear-gradient(135deg,var(--gold-300),var(--sakura-400)); flex-shrink:0; }
+.personName{ font-size:16px; font-weight:500; margin:0; }
+.personMeta{ font-size:14px; color:var(--gold-500); margin:0; }
+
+.dots{ display:flex; gap:8px; align-items:center; }
+.dot{ width:8px; height:8px; border-radius:4px; background:var(--gold-500); opacity:.4; border:none; padding:0; }
+.dotActive{ width:28px; opacity:1; }
+
+@media (max-width: 900px){
+  .reviewSpotlight{ gap:40px; }
+}
