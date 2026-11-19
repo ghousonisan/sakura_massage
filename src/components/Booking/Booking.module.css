@@ -41,5 +41,5 @@
 
 @media (max-width: 900px){
   .booking{ flex-direction:column; }
-  .contactPanel, .bookingForm{ width:100%; max-width:none; padding:40px 28px; }
+  .contactPanel, .bookingForm{ flex:none; width:100%; max-width:none; padding:40px 28px; }
 }

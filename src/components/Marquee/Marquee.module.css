@@ -3,12 +3,11 @@
   overflow:hidden; position:relative;
 }
 .marqueeTrack{ display:flex; width:max-content; animation:marquee 28s linear infinite; }
-.marqueeGroup{ display:flex; align-items:center; gap:0; padding-right:18px; }
+.marqueeGroup{ display:flex; align-items:center; gap:0; }
 .marqueeGroup span{
   font-family:var(--serif); font-style:italic; font-size:36px; color:var(--gold-500); white-space:nowrap;
-  margin-right:18px;
 }
-.marqueeGroup :global(.icon){ color:var(--sakura-400); margin-right:18px; }
+.marqueeGroup :global(.icon){ color:var(--sakura-400); margin:0 36px; }
 
 @keyframes marquee{ from{ transform:translateX(0);} to{ transform:translateX(-50%);} }
 

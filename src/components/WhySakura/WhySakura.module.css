@@ -49,20 +49,23 @@
 
 @media (max-width: 900px){
   .bentoRow{ flex-direction:column; }
-  .tilePhoto, .tileDark, .tileGold, .tileSmall, .tileQuote{ width:100%; height:auto; min-height:220px; }
+  .tilePhoto, .tileDark, .tileGold, .tileSmall, .tileQuote{ flex:none; width:100%; height:auto; min-height:220px; }
 
   .bentoRow1{
     display:grid; grid-template-columns:1fr 1fr; gap:16px;
   }
   .bentoRow1 .tilePhoto{ grid-column:1 / -1; min-height:420px; }
-  .bentoRow1 .tileDark, .bentoRow1 .tileGold{ height:auto; min-height:340px; padding:28px 20px; overflow:visible; }
+  .bentoRow1 .tileDark, .bentoRow1 .tileGold{
+    height:auto; min-height:0; justify-content:flex-start; gap:32px;
+    padding:28px 20px; overflow:visible;
+  }
   .bentoRow1 .tileTitleDark{ font-size:36px; line-height:1.15; }
   .bentoRow1 .tileTextDark{ font-size:14px; max-width:none; }
   .bentoRow1 .tileNumber{ font-size:56px; }
   .bentoRow1 .tileSub{ font-size:20px; }
 
   .bentoRow2 .tileSmall{
-    flex-direction:row; align-items:center; justify-content:flex-start;
+    flex:none !important; flex-direction:row; align-items:center; justify-content:flex-start;
     gap:16px; height:auto !important; min-height:0 !important; padding:18px 20px;
   }
   .bentoRow2 .tileSmall :global(.icon){ flex-shrink:0; width:32px; height:32px; }
