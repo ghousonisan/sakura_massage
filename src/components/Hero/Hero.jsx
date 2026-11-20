@@ -44,6 +44,10 @@ export default function Hero({ heroRef, onBurgerClick }) {
               </li>
               <li>
                 <span className={styles.checkIcon}><Icon name="check" size={14} /></span>
+                Safe and trusted service
+              </li>
+              <li>
+                <span className={styles.checkIcon}><Icon name="check" size={14} /></span>
                 Available 24 Hours
               </li>
             </ul>
@@ -68,7 +72,7 @@ export default function Hero({ heroRef, onBurgerClick }) {
               <img src="/assets/images/hero-detail.png" alt="Herbal compress and oil detail" />
             </div>
             <div className={styles.badge}>
-              <img src="/assets/images/logo-mark.svg" alt="" className={styles.badgeMark} />
+              {/* <img src="/assets/images/logo-mark.svg" alt="" className={styles.badgeMark} /> */}
               <p>Book in</p>
               <p>2 min</p>
             </div>

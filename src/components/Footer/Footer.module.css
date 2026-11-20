@@ -23,4 +23,5 @@
 
 @media (max-width: 900px){
   .footerTop{ gap:32px; }
+  .footer{ padding-bottom:calc(32px + 58px); }
 }

@@ -7,10 +7,10 @@ export default function Nav({ scrolled, onBurgerClick }) {
     <nav className={`${styles.navPill} ${scrolled ? styles.scrolled : ""}`}>
       <a href="#hero" className={styles.navLogo}>
         <img src="/assets/images/logo-mark.svg" alt="" className={styles.navLogoMark} />
-        <span className={styles.navWordmark}>
+        {/* <span className={styles.navWordmark}>
           <strong>SAKURA</strong>
           <small>MASSAGE</small>
-        </span>
+        </span> */}
       </a>
 
       <ul className={styles.navLinks}>

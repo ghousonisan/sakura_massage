@@ -121,9 +121,12 @@
   .ctas{ flex-direction:column; align-items:stretch; }
   .ctas > * { width:100%; }
   .checklist li{ white-space:normal; }
-
+  .titleWord{
+    font-size: 58px;
+  }
   .photoStage{
-    order:-1; flex-basis:auto; width:min(90vw,380px); margin:0 auto;
+    display: none;
+    /* order:-1; flex-basis:auto; width:min(90vw,380px); margin:0 auto; */
   }
   .photoDetail{ display:none; }
   .badge{ right:0; bottom:-10%; width:clamp(80px,26%,110px); }
