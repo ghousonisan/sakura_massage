@@ -40,7 +40,7 @@ export default function Reviews() {
   return (
     <section className={`${shared.section} ${styles.reviewSpotlight}`} id="reviews">
       <Reveal className={styles.ratingBlock}>
-        <p className={`${shared.eyebrow} ${shared.eyebrowGold500}`}>05 — Guests</p>
+        {/* <p className={`${shared.eyebrow} ${shared.eyebrowGold500}`}>05 — Guests</p> */}
         <p className={`${styles.ratingNum} ${shared.goldGrad}`} ref={ratingRef}>
           {ratingValue.toFixed(1)}
         </p>

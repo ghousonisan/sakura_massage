@@ -15,7 +15,7 @@ export default function HowItWorks() {
     <section className={`${shared.section} ${styles.howItWorks}`}>
       <Reveal className={shared.splitHeader}>
         <div className={shared.splitLeft}>
-          <p className={`${shared.eyebrow} ${shared.eyebrowGold700}`}>03 — How it works</p>
+          <p className={`${shared.eyebrow} ${shared.eyebrowGold700}`}>How it works</p>
           <h2 className={shared.hXl}>Your ritual in four steps.</h2>
         </div>
       </Reveal>

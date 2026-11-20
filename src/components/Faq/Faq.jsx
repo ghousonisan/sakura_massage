@@ -19,7 +19,7 @@ export default function Faq() {
   return (
     <section className={`${shared.section} ${styles.faq}`} id="faq">
       <Reveal className={styles.faqIntro}>
-        <p className={`${shared.eyebrow} ${shared.eyebrowGold700}`}>07 — FAQ</p>
+        {/* <p className={`${shared.eyebrow} ${shared.eyebrowGold700}`}>07 — FAQ</p> */}
         <h2 className={shared.hXl}>Good to know.</h2>
         <p className={shared.splitDesc}>Can&rsquo;t find your answer? Message us, we reply fast.</p>
         <a href="#" className={`${shared.btn} ${shared.btnOutlineGold700}`}>

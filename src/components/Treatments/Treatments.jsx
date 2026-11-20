@@ -40,7 +40,7 @@ export default function Treatments() {
     <section className={`${shared.section} ${styles.treatments}`} id="treatments">
       <Reveal className={shared.splitHeader}>
         <div className={shared.splitLeft}>
-          <p className={`${shared.eyebrow} ${shared.eyebrowGold500}`}>02 — Treatments</p>
+          <p className={`${shared.eyebrow} ${shared.eyebrowGold500}`}>Treatments</p>
           <h2 className={`${shared.hXl} ${shared.goldGrad}`}>Choose your ritual.</h2>
         </div>
         <p className={`${shared.splitDesc} ${shared.splitDescLight} ${styles.headerDesc}`}>

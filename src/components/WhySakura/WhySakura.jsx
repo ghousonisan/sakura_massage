@@ -8,7 +8,7 @@ export default function WhySakura() {
     <section className={`${shared.section} ${styles.whySakura}`} id="why-sakura">
       <Reveal className={shared.splitHeader}>
         <div className={shared.splitLeft}>
-          <p className={`${shared.eyebrow} ${shared.eyebrowGold700}`}>01 — Why Sakura</p>
+          <p className={`${shared.eyebrow} ${shared.eyebrowGold700}`}>Why Sakura</p>
           <h2 className={`${shared.hXl} ${styles.heading}`}>Care you can feel,<br />from the first touch.</h2>
         </div>
         <p className={`${shared.splitDesc} ${styles.desc}`}>

@@ -29,7 +29,7 @@ export default function Hero({ heroRef, onBurgerClick }) {
 
             <p className={styles.subheading}>Relaxation Directly to Your Door</p>
 
-            <p className={styles.sub}>
+            <p className={styles.sub} title="hi">
               Experience premium, authentic Thai massage in the comfort of your own.
             </p>
 

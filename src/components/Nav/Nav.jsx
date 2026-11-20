@@ -16,7 +16,7 @@ export default function Nav({ scrolled, onBurgerClick }) {
       <ul className={styles.navLinks}>
         <li><a href="#treatments">Treatments</a></li>
         <li><a href="#why-sakura">Why Sakura</a></li>
-        <li><a href="#therapists">Therapists</a></li>
+        {/* <li><a href="#therapists">Therapists</a></li> */}
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>

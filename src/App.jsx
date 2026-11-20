@@ -33,7 +33,7 @@ export default function App() {
       <WhySakura />
       <Treatments />
       <HowItWorks />
-      <Therapists />
+      {/* <Therapists /> */}
       <Reviews />
       <Booking />
       <Faq />

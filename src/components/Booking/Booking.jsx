@@ -20,7 +20,7 @@ export default function Booking() {
   return (
     <section className={`${shared.section} ${styles.booking}`} id="booking">
       <Reveal className={styles.contactPanel}>
-        <p className={`${shared.eyebrow} ${shared.eyebrowGold500}`}>06 — Book</p>
+        {/* <p className={`${shared.eyebrow} ${shared.eyebrowGold500}`}>06 — Book</p> */}
         <h2 className={`${shared.hXl} ${shared.goldGrad}`}>Book in under<br />two minutes.</h2>
         <p className={styles.panelDesc}>
           Send your location and preferred time. We confirm in minutes, every day until [24:00].
