@@ -7,10 +7,10 @@ export default function Nav({ scrolled, onBurgerClick }) {
     <nav className={`${styles.navPill} ${scrolled ? styles.scrolled : ""}`}>
       <a href="#hero" className={styles.navLogo}>
         <img src="/assets/images/logo-mark.svg" alt="" className={styles.navLogoMark} />
-        {/* <span className={styles.navWordmark}>
+        <span className={styles.navWordmark}>
           <strong>SAKURA</strong>
           <small>MASSAGE</small>
-        </span> */}
+        </span>
       </a>
 
       <ul className={styles.navLinks}>
@@ -21,7 +21,7 @@ export default function Nav({ scrolled, onBurgerClick }) {
         <li><a href="#faq">FAQ</a></li>
       </ul>
 
-      <a href="#booking" className={`${shared.btn} ${shared.btnGold} ${shared.btnSm}`}>
+      <a href="#booking" className={`${shared.btn} ${shared.btnGold} ${shared.btnSm} ${styles.bookNow}`}>
         <Icon name="whatsapp" size={20} />
         Book now
       </a>
