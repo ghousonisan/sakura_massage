@@ -67,10 +67,10 @@
   border-radius:220px 220px 36px 36px; overflow:hidden;
   box-shadow:0 30px 60px rgba(5,36,26,.2);
 }
-.photoMain img{ width:100%; height:100%; object-fit:cover; }
+.photoMain img{ width:100%; height:100%; object-fit:cover; object-position:right center; }
 
 .photoDetail{
-  position:absolute; left:-18%; bottom:16%; width:56%; aspect-ratio:250 / 280;
+  position:absolute; left:-38%; bottom:06%; width:56%; aspect-ratio:250 / 280;
   border-radius:28px; border:10px solid var(--ivory-50); overflow:hidden;
   box-shadow:0 20px 40px rgba(5,36,26,.25);
 }

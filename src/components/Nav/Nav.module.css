@@ -29,9 +29,9 @@
 }
 
 @media (max-width: 900px){
-  .navPill{ width:98%; margin:16px auto 0; height:90px; justify-content:center; }
+  .navPill{ width:98%; margin:16px auto 0; height:150px; justify-content:center; }
   .bookNow{ display:none; }
-  .navLogoMark{ width:56px; height:56px; }
-  .navWordmark strong{ font-size:26px; }
-  .navWordmark small{ font-size:8px; letter-spacing:3.6px; }
+  .navLogoMark{ width:96px; height:96px; }
+  .navWordmark strong{ font-size:48px; }
+  .navWordmark small{ font-size:16px; letter-spacing:3.6px; }
 }
