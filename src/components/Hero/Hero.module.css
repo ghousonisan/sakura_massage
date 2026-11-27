@@ -55,9 +55,32 @@
 
 .ctas{ display:flex; gap:14px; flex-wrap:wrap; }
 
-/* ---- photo composition: a self-contained box. photoDetail/badge are
-   positioned as a % of THIS box, not of the whole hero — so they stay put
-   relative to the photo no matter how long the text column is. ---- */
+.bookNowBtn{ position:relative; }
+.bookNowBtn::after{
+  content:""; position:absolute; inset:-5px; border-radius:30px;
+  border:2px solid var(--gold-500); opacity:.7; pointer-events:none;
+  animation:pulseRing 2.2s ease-out infinite;
+}
+
+.fab{
+  position:fixed; right:20px; top:172px; z-index:55;
+  display:none; align-items:center; gap:8px; height:52px; padding:0 22px;
+  border-radius:30px; background:linear-gradient(180deg,var(--gold-200),var(--gold-500));
+  color:var(--emerald-800); font-family:var(--sans); font-weight:600; font-size:15px;
+  box-shadow:0 14px 28px rgba(5,36,26,.35);
+  transform:translateY(-16px) scale(.9); opacity:0; pointer-events:none;
+  transition:transform .3s ease, opacity .3s ease;
+}
+.fabVisible{ transform:translateY(0) scale(1); opacity:1; pointer-events:auto; }
+
+@keyframes pulseRing{
+  0%{ transform:scale(1); opacity:.6; }
+  100%{ transform:scale(1.14); opacity:0; }
+}
+
+/* ---- photo composition: a self-contained box. badge is positioned as a
+   % of THIS box, not of the whole hero — so it stays put relative to the
+   photo no matter how long the text column is. ---- */
 .photoStage{
   position:relative; flex:0 0 clamp(260px,32vw,440px); width:clamp(260px,32vw,440px);
   aspect-ratio:440 / 660;
@@ -67,7 +90,7 @@
   border-radius:220px 220px 36px 36px; overflow:hidden;
   box-shadow:0 30px 60px rgba(5,36,26,.2);
 }
-.photoMain img{ width:100%; height:100%; object-fit:cover; object-position:right center; }
+.photoMain img{ width:100%; height:100%; object-fit:cover; object-position:center 22%; }
 
 .photoDetail{
   position:absolute; left:-38%; bottom:06%; width:56%; aspect-ratio:250 / 280;
@@ -105,7 +128,11 @@
 }
 
 @media (prefers-reduced-motion:reduce){
-  .badge, .petal{ animation:none; }
+  .badge, .petal, .bookNowBtn::after{ animation:none; }
+}
+
+@media (max-width: 900px){
+  .fab{ display:flex; }
 }
 
 @media (max-width: 1100px){

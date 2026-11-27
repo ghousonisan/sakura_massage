@@ -4,16 +4,27 @@ import Icon from "../Icon";
 import shared from "../../styles/shared.module.css";
 import styles from "./Hero.module.css";
 
+const WHATSAPP_NUMBER = "66934162978";
+const BOOKING_MESSAGE = encodeURIComponent("Hi! I'd like to book a massage.");
+const WHATSAPP_BOOK_HREF = `https://wa.me/${WHATSAPP_NUMBER}?text=${BOOKING_MESSAGE}`;
+
 export default function Hero({ heroRef, onBurgerClick }) {
   const [scrolled, setScrolled] = useState(false);
+  const [fabVisible, setFabVisible] = useState(true);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 80);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 80);
+      if (heroRef.current) {
+        setFabVisible(heroRef.current.getBoundingClientRect().bottom > 0);
+      }
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [heroRef]);
 
   return (
+    <>
     <header className={styles.hero} id="hero" ref={heroRef}>
       <div className={styles.heroStage}>
         <div className={styles.glow} aria-hidden="true" />
@@ -53,11 +64,11 @@ export default function Hero({ heroRef, onBurgerClick }) {
             </ul>
 
             <div className={styles.ctas}>
-              <a href="https://wa.me/" className={`${shared.btn} ${shared.btnGold}`}>
+              <a href={WHATSAPP_BOOK_HREF} className={`${shared.btn} ${shared.btnGold} ${styles.bookNowBtn}`}>
                 <Icon name="whatsapp" size={20} />
-                Chat on WhatsApp
+                Book Now
               </a>
-              <a href="tel:" className={`${shared.btn} ${shared.btnOutlineGold}`}>
+              <a href={`tel:+${WHATSAPP_NUMBER}`} className={`${shared.btn} ${shared.btnOutlineGold}`}>
                 <Icon name="phone" size={20} />
                 Call Now
               </a>
@@ -66,13 +77,12 @@ export default function Hero({ heroRef, onBurgerClick }) {
 
           <div className={styles.photoStage}>
             <div className={styles.photoMain}>
-              <img src="/assets/images/hero-main.png" alt="Thai massage session in warm studio light" />
+              <img src="/assets/images/hero-portrait.png" alt="Sakura Massage & Spa therapist giving a traditional Thai massage" />
             </div>
             <div className={styles.photoDetail}>
               <img src="/assets/images/hero-detail.png" alt="Herbal compress and oil detail" />
             </div>
             <div className={styles.badge}>
-              {/* <img src="/assets/images/logo-mark.svg" alt="" className={styles.badgeMark} /> */}
               <p>Book in</p>
               <p>2 min</p>
             </div>
@@ -89,5 +99,15 @@ export default function Hero({ heroRef, onBurgerClick }) {
         </div>
       </div>
     </header>
+
+    <a
+      href={WHATSAPP_BOOK_HREF}
+      className={`${styles.fab} ${fabVisible ? styles.fabVisible : ""}`}
+      aria-hidden={!fabVisible}
+    >
+      <Icon name="whatsapp" size={18} />
+      Book Now
+    </a>
+    </>
   );
 }

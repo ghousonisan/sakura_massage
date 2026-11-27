@@ -11,6 +11,7 @@ import Booking from "./components/Booking/Booking";
 import Faq from "./components/Faq/Faq";
 import Footer from "./components/Footer/Footer";
 import MobileStickyBar from "./components/MobileStickyBar/MobileStickyBar";
+import BookingPopup from "./components/BookingPopup/BookingPopup";
 
 export default function App() {
   const heroRef = useRef(null);
@@ -39,6 +40,7 @@ export default function App() {
       <Faq />
       <Footer />
       <MobileStickyBar visible={stickyVisible} />
+      <BookingPopup />
     </>
   );
 }

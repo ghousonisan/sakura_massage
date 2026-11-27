@@ -4,6 +4,9 @@ import Reveal from "../Reveal";
 import shared from "../../styles/shared.module.css";
 import styles from "./Booking.module.css";
 
+const WHATSAPP_NUMBER = "66934162978";
+const WHATSAPP_DISPLAY = "+66 93 416 2978";
+
 export default function Booking() {
   const [form, setForm] = useState({ name: "", phone: "", treatment: "Traditional Thai", datetime: "", location: "" });
 
@@ -26,11 +29,11 @@ export default function Booking() {
           Send your location and preferred time. We confirm in minutes, every day until [24:00].
         </p>
 
-        <a href="https://wa.me/" className={styles.contactRow}>
+        <a href={`https://wa.me/${WHATSAPP_NUMBER}`} className={styles.contactRow}>
           <span className={styles.contactIcon}><Icon name="whatsapp" size={22} /></span>
           <span className={styles.contactText}>
             <span className={styles.contactLabel}>WhatsApp</span>
-            <span className={styles.contactValue}>[WhatsApp number]</span>
+            <span className={styles.contactValue}>{WHATSAPP_DISPLAY}</span>
           </span>
           <Icon name="arrow-right" size={22} />
         </a>
@@ -42,11 +45,11 @@ export default function Booking() {
           </span>
           <Icon name="arrow-right" size={22} />
         </a>
-        <a href="tel:" className={styles.contactRow}>
+        <a href={`tel:+${WHATSAPP_NUMBER}`} className={styles.contactRow}>
           <span className={styles.contactIcon}><Icon name="phone" size={22} /></span>
           <span className={styles.contactText}>
             <span className={styles.contactLabel}>Call</span>
-            <span className={styles.contactValue}>[Phone number]</span>
+            <span className={styles.contactValue}>{WHATSAPP_DISPLAY}</span>
           </span>
           <Icon name="arrow-right" size={22} />
         </a>
