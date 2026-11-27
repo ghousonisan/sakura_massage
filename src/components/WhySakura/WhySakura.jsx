@@ -19,7 +19,7 @@ export default function WhySakura() {
 
       <div className={`${styles.bentoRow} ${styles.bentoRow1}`}>
         <Reveal className={`${styles.bentoTile} ${styles.tilePhoto}`}>
-          <img src="/assets/images/bento-tile.png" alt="Therapist stretching guest" />
+          <img src="/assets/images/hero-banner.png" alt="Sakura Massage & Spa therapist giving a traditional Thai massage" />
           <div className={styles.tileOverlay}>
             <h3 className={`${styles.tileTitle} ${shared.gold}`}>Authentic Thai techniques</h3>
             <p className={styles.tileText}>

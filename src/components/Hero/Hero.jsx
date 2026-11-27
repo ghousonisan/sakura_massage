@@ -77,7 +77,7 @@ export default function Hero({ heroRef, onBurgerClick }) {
 
           <div className={styles.photoStage}>
             <div className={styles.photoMain}>
-              <img src="/assets/images/hero-portrait.png" alt="Sakura Massage & Spa therapist giving a traditional Thai massage" />
+              <img src="/assets/images/hero-main.png" alt="Thai massage session in warm studio light" />
             </div>
             <div className={styles.photoDetail}>
               <img src="/assets/images/hero-detail.png" alt="Herbal compress and oil detail" />
